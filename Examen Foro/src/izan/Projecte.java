@@ -1,7 +1,11 @@
 package izan;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.lang.reflect.Array;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 import izan.usuaris.admin;
 
@@ -50,7 +54,6 @@ public class Projecte
         System.out.println("**********************************");
         String nom = " ";
         String contrasenya = " ";
-        //LocalDate ld = ""
         int opcio;
         boolean sortir = false;
         while (!sortir) {
@@ -90,9 +93,13 @@ public class Projecte
     }
 
     public static void registre(String nom, String contrasenya) {
+        
         System.console().readLine("Introdueix un nom d'usuari (pq jo no conprovaré si ja hi és): ");
         System.console().readLine("Introdueix la teva contrasenya: ");
+        String entrada = " ";
+        DateFormat format = new SimpleDateFormat("DD/MM/YYYY");
         System.console().readLine("Introdueix la teva data de naixament (dd/mm/yyyy): ");
+        int anys = 0;
         System.out.println("Anys: ");
         menu();
     }
